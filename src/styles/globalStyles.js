@@ -21,6 +21,17 @@ const GlobalStyles = createGlobalStyle`
     grid-gap: 30px;
     position: relative;
     top: -108px;
+    @media (max-width:1250px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+@media (max-width:1250px) {
+    .container2 {
+        width: 50%;
+    }
 }
 .blue {
     color: rgba(29, 161, 242, 1);
@@ -36,9 +47,15 @@ const GlobalStyles = createGlobalStyle`
     margin: auto;
     position: relative;
     top: -70px;
+    @media (max-width:1250px) {
+        width: 90%;
+    }
 }
 .over {
     color: ${props =>(props.active ? 'white' : 'rgba(99, 104, 125, 1)')};
+    @media (max-width:1250px) {
+        font-size: 18px;
+    }
 }
 .container4 {
     width: 1110px;
@@ -48,6 +65,13 @@ const GlobalStyles = createGlobalStyle`
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 30px;
+    @media (max-width:1250px) {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 `;
 

@@ -4,14 +4,25 @@ const StyledContainer = styled.div`
     width: 1110px;
     height: 240px;
     margin: auto;
+    @media (max-width:1250px) {
+        width: 90%;
+    }
 `;
 const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
+    @media (max-width:550px) {
+        flex-direction: column;
+        gap: 20px;
+    }
 `;
 const StyledMode = styled.div`
     display: flex;
     align-items: center;
+    @media (max-width:1250px) {
+        border-top: 1px solid rgba(29, 31, 41, 1);
+        padding-top: 15px;
+    }
 `;
 const StyledButton = styled.button`
     position: relative;
@@ -38,6 +49,9 @@ const StyledH1 = styled.h1`
     font-weight: bold;
     color: ${props =>(props.active ? 'white' : 'rgba(29, 31, 41, 1)')};
     margin-bottom: .2rem;
+    @media (max-width:1250px) {
+        font-size: 20px;
+    }
 `;
 const StyledP = styled.p`
     font-size: 14px;

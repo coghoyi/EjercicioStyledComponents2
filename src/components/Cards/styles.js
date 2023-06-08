@@ -5,7 +5,14 @@ const StyledCard = styled.div`
     height: 211px;
     border-radius: 6px;
     border-top: 5px solid;
+    cursor: pointer;
     background-color: ${props => (props.active ? 'rgba(37, 43, 66, 1)' : 'rgba(241, 243, 250, 1)')};
+    &:hover{
+        background-color: ${props => (props.active ? 'rgba(51, 58, 85, 1)' : 'rgba(225, 228, 240, 1)')};
+    }
+    @media (max-width:1250px) {
+        width: 400px;
+    }
 `;
 const StyledRed = styled.div`
     width: 100%;

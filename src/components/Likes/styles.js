@@ -5,8 +5,20 @@ const StyledLikes = styled.div`
     height: 125px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     background-color: ${props => (props.active ? 'rgba(37, 43, 66, 1)' : 'rgba(241, 243, 250, 1)')};
     border-radius: 6px;
+    &:hover{
+        background-color: ${props => (props.active ? 'rgba(51, 58, 85, 1)' : 'rgba(225, 228, 240, 1)')};
+    }
+    @media (max-width:1250px) {
+        width: 400px;
+        height: 211px;
+    }
+    @media (max-width:550px) {
+        width: 350px;
+        height: 125px;
+    }
 `;
 const StyledViews = styled.div`
     width: 80%;

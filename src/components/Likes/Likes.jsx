@@ -1,15 +1,15 @@
 import { StyledLikes, StyledViews, StyledH2, StyledH3, StyledP, StyledImg } from "./styles";
 
-const Likes = ({active})=>{
+const Likes = ({active, src, src2, alt, t1, t2, t3, color})=>{
     return(
         <StyledLikes active={active}>
             <StyledViews>
-                <StyledH2>Page Views</StyledH2>
-                <img src='/public/images/icon-facebook.svg' alt="" />
+                <StyledH2>{t1}</StyledH2>
+                <img src={src} alt={alt} />
             </StyledViews>
             <StyledViews>
-                <StyledH3 active={active}>87</StyledH3>
-                <StyledP> <StyledImg src='/public/images/icon-up.svg' alt="" /> 3%</StyledP>
+                <StyledH3 active={active}>{t2}</StyledH3>
+                <StyledP className={color}> <StyledImg src={src2} alt={alt} /> {t3}</StyledP>
             </StyledViews>
         </StyledLikes>
     )

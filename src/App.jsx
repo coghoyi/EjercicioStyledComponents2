@@ -1,9 +1,10 @@
+import Likes from "./components/Likes/Likes";
 import Cards from "./components/Cards/Cards";
 import Social from "./components/Social/Social";
 import { GlobalStyles } from "./styles/globalStyles";
 import { useState } from "react";
 import { CARDS } from "./constants/cards";
-import Likes from "./components/Likes/Likes";
+import { LIKES } from "./constants/likes";
 
 const App = () => {
 
@@ -42,8 +43,22 @@ const App = () => {
 				<h1 className="over">Overview - Today</h1>
 			</div>
 			<div className="container4">
-				<Likes active={active}
-				setActive={setActive}/>
+				{
+				LIKES.map(likes=>(
+					<Likes
+						key={likes.id}
+						src={likes.src}
+						src2={likes.src2}
+						alt={likes.alt}
+						t1={likes.t1}
+						t2={likes.t2}
+						t3={likes.t3}
+						color={likes.color}
+						active={active}
+						setActive={setActive}
+					/>
+				))
+				}
 				
 			</div>
 		</>
