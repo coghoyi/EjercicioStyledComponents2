@@ -27,6 +27,12 @@ const GlobalStyles = createGlobalStyle`
         align-items: center;
         margin-top: 20px;
     }
+    @media (max-width:550px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
 }
 @media (max-width:1250px) {
     .container2 {

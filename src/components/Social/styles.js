@@ -19,7 +19,7 @@ const StyledHeader = styled.header`
 const StyledMode = styled.div`
     display: flex;
     align-items: center;
-    @media (max-width:1250px) {
+    @media (max-width:550px) {
         border-top: 1px solid rgba(29, 31, 41, 1);
         padding-top: 15px;
     }
