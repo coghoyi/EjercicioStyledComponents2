@@ -52,6 +52,7 @@ const GlobalStyles = createGlobalStyle`
     }
 }
 .over {
+    font-size: 28px;
     color: ${props =>(props.active ? 'white' : 'rgba(99, 104, 125, 1)')};
     @media (max-width:1250px) {
         font-size: 18px;
