@@ -1,5 +1,53 @@
+import Cards from "./components/Cards/Cards";
+import Social from "./components/Social/Social";
+import { GlobalStyles } from "./styles/globalStyles";
+import { useState } from "react";
+import { CARDS } from "./constants/cards";
+import Likes from "./components/Likes/Likes";
+
 const App = () => {
-	return <h1>Núcleo de la aplicación</h1>;
+
+	const [active, setActive] = useState(true);
+
+	return (
+		<>
+		<GlobalStyles active={active}/>
+			<div className="container">
+				<Social 
+				active={active}
+				setActive={setActive}
+				/>
+			</div>
+			<div className="container2">
+				{
+					CARDS.map(card=>(
+						<Cards
+						key={card.id}
+						color={card.color}
+						src={card.src}
+						alt={card.alt}
+						text1={card.text1}
+						text2={card.text2}
+						text3={card.text3}
+						text4={card.text4}
+						arrow={card.arrow}
+						colorLetra={card.colorLetra}
+						active={active}
+						setActive={setActive}
+						/>
+					))
+				}
+			</div>
+			<div className="container3">
+				<h1 className="over">Overview - Today</h1>
+			</div>
+			<div className="container4">
+				<Likes active={active}
+				setActive={setActive}/>
+				
+			</div>
+		</>
+	)
 };
 
 export default App;
