@@ -1,4 +1,4 @@
-import { StyledLikes, StyledViews, StyledH2, StyledH3 } from "./styles";
+import { StyledLikes, StyledViews, StyledH2, StyledH3, StyledP, StyledImg } from "./styles";
 
 const Likes = ({active})=>{
     return(
@@ -9,7 +9,7 @@ const Likes = ({active})=>{
             </StyledViews>
             <StyledViews>
                 <StyledH3 active={active}>87</StyledH3>
-                <p> <img src='/public/images/icon-up.svg' alt="" /> 3%</p>
+                <StyledP> <StyledImg src='/public/images/icon-up.svg' alt="" /> 3%</StyledP>
             </StyledViews>
         </StyledLikes>
     )

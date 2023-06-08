@@ -26,5 +26,16 @@ const StyledH3 = styled.h3`
     font-weight: bold;
     color: ${props => (props.active ? 'white' : 'rgba(29, 31, 41, 1)')};
 `;
+const StyledP = styled.p`
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: rgba(30, 181, 137, 1);
+    
+`;
+const StyledImg = styled.img`
+    padding-bottom: 2px;
+`;
 
-export {StyledLikes, StyledViews, StyledH2, StyledH3};
+export {StyledLikes, StyledViews, StyledH2, StyledH3, StyledP, StyledImg};
